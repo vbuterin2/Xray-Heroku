@@ -33,7 +33,7 @@ XRay 将在部署时不会自动安装最新版本，目前是1.2.1版。
 ## 流量中转
 
 可以使用cloudflare的workers来`中转流量`，配置为：  
-
+```js
 addEventListener(  
     "fetch",event => {  
         let url=new URL(event.request.url);  
@@ -44,7 +44,7 @@ addEventListener(
         )  
     }  
 )  
-
+```
 
 ## 关于CF筛选IP
 
